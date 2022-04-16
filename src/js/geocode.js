@@ -1,10 +1,10 @@
-const positionStackUrl = 'http://api.positionstack.com/v1/forward?';
-const PSApiKey = 'access_key=d1815bb82d8ef2d2cc23e6843ef3e3a7';
+const openWeatherGeoCodeUrl = 'http://api.openweathermap.org/geo/1.0/direct?';
+const OWApiKey = 'c3f37a8f85bd36886ebfe021ad796145';
 
 const forwardGeocodeQuery = async (query) => {
-  const positionStackAPI = `${positionStackUrl}${PSApiKey}`;
-  const positionStackQuery = `${positionStackAPI}&query=${query}&limit=5`;
-  const response = await fetch(positionStackQuery, { mode: 'cors' });
+  const openWeatherGeoQuery = `${openWeatherGeoCodeUrl}q=${query}&limit=5`;
+  const openWeatherGeoAPI = `${openWeatherGeoQuery}&appid=${OWApiKey}`;
+  const response = await fetch(openWeatherGeoAPI, { mode: 'cors' });
   const json = await response.json();
 
   return json;

@@ -38,8 +38,8 @@ const updateWeatherData = (lat, lon, name) => {
 
 const updateWeatherDataWithQuery = async (query) => {
   const [lat, lon, name] = await forwardGeocodeQuery(query).then((geoData) => {
-    const queryData = geoData.data[0];
-    return [queryData.latitude, queryData.longitude, queryData.name];
+    const queryData = geoData[0];
+    return [queryData.lat, queryData.lon, queryData.name];
   });
 
   updateWeatherData(lat, lon, name);
