@@ -3,21 +3,53 @@
   <head>
   <script defer src="/bundle.js"></script></head>
   <body>
-    <article id="forecast-container">
-      <p>Current weather at 
-        <span id="current-weather-location">CurrentLocation</span>
-      </p>
-      <section id="current-weather-forecast">
-        <ol>
-          <li>Mon.</li>
-          <li>Tue.</li>
-          <li>Wed.</li>
-          <li>Thu.</li>
-          <li>Fri.</li>
-          <li>Sat.</li>
-          <li>Sun.</li>
-        </ol>
+    <header>
+      <time id="clock"></time>
+      <h2>JS_Weather</h2>
+      <small><u>Frontend for OpenWeatherAPI</u></small>
+    </header>
+    <main id="wrapper">
+      <form onsubmit="return(false);">
+        <input type="text" id="search" placeholder="Search for a location..">
+        <button type="submit" id="submit">Submit
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg> -->
+      </button>
+      </form>
+      <article id="current-weather">
+          <div>            
+            <h4 id="location"></h4>
+            <figure>
+              <img id='current-weather-icon' alt="current-weather-status-icon">
+              <figcaption id="current-weather-status"></figcaption>
+            </figure>
+          </div>
+          <section id="current-temps">
+            <div id="current-hi-low">
+              <small>Hi: <span id="current-high"></span></small>
+              <small>Lo: <span id="current-low"></span></small>
+            </div>
+            <small>Feels like: <span id="current-feels-like"></span></small>
+            <div><span id="current-temp"></span></div>
+          </section>
+          <section id="current-details">
+            <h6>Details</h6>
+            <small>Humidity: <span id="current-humidity"></span></small>
+            <small>Dew Point: <span id="current-dew-point"></span></small>
+            <small>Pressure: <span id="current-pressure"></span></small>
+            <small>UV Index: <span id="current-uv-index"></span></small>
+            <small>Visibility: <span id="current-visibility"></span></small>
+            <small>Cloud Coverage: <span id="current-clouds"></span></small>
+            <h6>Wind</h6>
+            <small>Speed: <span id="wind-speed"></span></small>
+            <small>Direction: <span id="wind-direction"></span></small>
+          </section>
+      </article>
+      <hr>
+      <section id="daily-forecast">
+        <h4>Daily Forecast</h4>
       </section>
-    </article>    
+    </main>    
   </body>
 </html>
