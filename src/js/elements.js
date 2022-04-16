@@ -16,14 +16,17 @@ const buildDailyForecast = () => {
     const dayHeader = document.createElement('b');
     const daySubHeader = document.createElement('span');
     const dayIcon = new Image();
-    const dayStatus = document.createElement('span');
-    const dayHiLo = document.createElement('span');
+    const dayStatus = document.createElement('small');
+    const dayHi = document.createElement('div');
+    const dayLo = document.createElement('div');
+    dayDiv.classList.add('day-div');
     dayDiv.id = `${day}day-forecast`;
     dayDiv.appendChild(dayHeader);
     dayDiv.appendChild(daySubHeader);
     dayDiv.appendChild(dayIcon);
     dayDiv.appendChild(dayStatus);
-    dayDiv.appendChild(dayHiLo);
+    dayDiv.appendChild(dayHi);
+    dayDiv.appendChild(dayLo);
     dayHeader.textContent = `${day[0].toUpperCase()}${day.slice(1, day.length)}day`;
     return dayDiv;
   });
@@ -35,6 +38,7 @@ const getElements = () => {
   const forecastWrapper = document.getElementById('wrapper');
   const currentLocation = document.getElementById('location');
   const currentWeather = document.getElementById('current-weather');
+  const currentStatus = document.getElementById('current-weather-status');
   const currentIcon = document.getElementById('current-weather-icon');
   const currentTemp = document.getElementById('current-temp');
   const currentHigh = document.getElementById('current-high');
@@ -58,6 +62,7 @@ const getElements = () => {
     wrapper: forecastWrapper,
     location: currentLocation,
     weather: currentWeather,
+    status: currentStatus,
     icon: currentIcon,
     clock,
     daily,

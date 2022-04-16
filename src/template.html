@@ -4,6 +4,7 @@
   </head>
   <body>
     <header>
+      <time id="clock"></time>
       <h2>JS_Weather</h2>
       <small><u>Frontend for OpenWeatherAPI</u></small>
     </header>
@@ -16,40 +17,34 @@
           </svg> -->
       </button>
       </form>
-      <time id="clock"></time>
-      <p>
-        <span id="location"></span>
-      </p>
-      <img id='current-weather-icon' alt="current-weather-status-icon">
       <article id="current-weather">
-        <p>
-        </p>
-        <section id="current-temps">
-          <h6>Temperature</h6>
-          <div id="current-hi-low">
-            High: <span id="current-high"></span>
-            Low: <span id="current-low"></span>
+          <div>            
+            <h4 id="location"></h4>
+            <figure>
+              <img id='current-weather-icon' alt="current-weather-status-icon">
+              <figcaption id="current-weather-status"></figcaption>
+            </figure>
           </div>
-          <div>Current: <span id="current-temp"></span></div>
-          <div>Feels like: <span id="current-feels-like"></span></div>
-        </section>
-        <hr>
-        <section id="current-details">
-          <h6>Details</h6>
-           <div>Humidity: <span id="current-humidity"></span></div>
-           <div>Dew Point: <span id="current-dew-point"></span></div>
-           <div>Pressure: <span id="current-pressure"></span></div>
-           <div>UV Index: <span id="current-uv-index"></span></div>
-           <div>Visibility: <span id="current-visibility"></span></div>
-           <div>Cloud Coverage: <span id="current-clouds"></span></div>
-        </section>
-        <section id="current-wind">
-          <h6>Wind</h6>
-            <div>
-              Speed: <span id="wind-speed"></span>
-              Direction: <span id="wind-direction"></span>
+          <section id="current-temps">
+            <div id="current-hi-low">
+              <small>Hi: <span id="current-high"></span></small>
+              <small>Lo: <span id="current-low"></span></small>
             </div>
-        </section>
+            <small>Feels like: <span id="current-feels-like"></span></small>
+            <div><span id="current-temp"></span></div>
+          </section>
+          <section id="current-details">
+            <h6>Details</h6>
+            <small>Humidity: <span id="current-humidity"></span></small>
+            <small>Dew Point: <span id="current-dew-point"></span></small>
+            <small>Pressure: <span id="current-pressure"></span></small>
+            <small>UV Index: <span id="current-uv-index"></span></small>
+            <small>Visibility: <span id="current-visibility"></span></small>
+            <small>Cloud Coverage: <span id="current-clouds"></span></small>
+            <h6>Wind</h6>
+            <small>Speed: <span id="wind-speed"></span></small>
+            <small>Direction: <span id="wind-direction"></span></small>
+          </section>
       </article>
       <hr>
       <section id="daily-forecast">

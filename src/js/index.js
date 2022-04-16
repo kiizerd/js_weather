@@ -49,7 +49,7 @@ const updateWeatherDataWithQuery = async (query) => {
 
 // Call once for initial load.
 tickClockElement();
-let lastQuery = 'London';
+let lastQuery = 'Dallas';
 updateWeatherDataWithQuery(lastQuery);
 
 document.getElementById('submit').onclick = async () => {
@@ -70,3 +70,5 @@ setInterval(async () => {
 setInterval(() => {
   tickClockElement();
 }, 1000);
+
+// Hide main element on load, until all promises are resolved.

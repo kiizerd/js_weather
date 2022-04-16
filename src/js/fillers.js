@@ -6,8 +6,8 @@ import { getDescriptionFromWeatherData } from './getters';
 const elements = getElements();
 
 const fillPageCurrentStatus = (weatherData) => {
-  elements.weather.children[0].textContent = weatherData.weather;
-  getWeatherIcon(weatherData.iconCode, 2).then((url) => {
+  elements.status.textContent = weatherData.weather;
+  getWeatherIcon(weatherData.iconCode, 4).then((url) => {
     elements.icon.src = url;
   });
   elements.location.textContent = weatherData.name;
@@ -52,7 +52,7 @@ const fillPageDailyData = (weatherData) => {
   dayDivs.forEach((dayDiv, dayIndex) => {
     const dayData = daily[dayIndex];
     const children = Array.from(dayDiv.children);
-    const [subheader, icon, status, hiLow] = children.slice(1, children.length);
+    const [subheader, icon, status, high, low] = children.slice(1, children.length);
 
     // Add month and day to dayDiv header
     const unixTime = daily[dayIndex].sunrise - 100;
@@ -73,7 +73,8 @@ const fillPageDailyData = (weatherData) => {
     const dayHigh = convertTemp(dayData.temp.max, 'K');
     const dayLow = convertTemp(dayData.temp.min, 'K');
     const degree = '\u00B0';
-    hiLow.textContent = `${dayLow}${degree}C - ${dayHigh}${degree}C`;
+    high.textContent = `Hi ${dayHigh}${degree}C`;
+    low.textContent = `Lo ${dayLow}${degree}C`;
   });
 };
 
