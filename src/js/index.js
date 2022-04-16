@@ -2,7 +2,7 @@ import '../styles/main.scss';
 import { Now } from 'temporal-polyfill';
 import forwardGeocodeQuery from './geocode';
 import { getWeatherData } from './weather';
-import getElements from './elements';
+import { fillPageWithWeatherData } from './fillers';
 import {
   getDescriptionFromWeatherData,
   getTempsFromWeatherData,
@@ -11,15 +11,13 @@ import {
   getDateTimeString,
 } from './getters';
 
-import { fillPageWithWeatherData } from './fillers';
-
 // Add:
 // Precipitation
 
 const tickClockElement = () => {
-  const elements = getElements();
-  elements.clock.dateTime = Now.instant().toString();
-  elements.clock.textContent = getDateTimeString();
+  const clock = document.getElementById('clock');
+  clock.dateTime = Now.instant().toString();
+  clock.textContent = getDateTimeString();
 };
 
 const updateWeatherData = (lat, lon, name) => {
