@@ -1,9 +1,9 @@
-const openWeatherUrl = 'http://api.openweathermap.org/';
+const openWeatherUrl = 'https://api.openweathermap.org/';
 const oneCallEndpoint = 'data/2.5/onecall?';
 const OWApiKey = '&APPID=c3f37a8f85bd36886ebfe021ad796145';
 
 const getWeatherIcon = async (iconCode, sizeFactor) => {
-  const iconUrl = 'http://openweathermap.org/img/wn/';
+  const iconUrl = 'https://openweathermap.org/img/wn/';
   const iconAPI = `${iconUrl}${iconCode}@${sizeFactor}x.png`;
   const response = await fetch(iconAPI, { mode: 'cors' });
 

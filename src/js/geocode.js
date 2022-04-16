@@ -1,4 +1,4 @@
-const openWeatherGeoCodeUrl = 'http://api.openweathermap.org/geo/1.0/direct?';
+const openWeatherGeoCodeUrl = 'https://api.openweathermap.org/geo/1.0/direct?';
 const OWApiKey = 'c3f37a8f85bd36886ebfe021ad796145';
 
 const forwardGeocodeQuery = async (query) => {
