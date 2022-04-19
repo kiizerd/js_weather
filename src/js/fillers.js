@@ -48,7 +48,7 @@ const fillPageCurrentData = (weatherData) => {
 
 const fillPageDailyData = (weatherData) => {
   const daily = weatherData.daily.slice(1, weatherData.daily.length);
-  const dayDivs = Array.from(elements.daily.children).slice(1, 7);
+  const dayDivs = Array.from(elements.daily.children);
   dayDivs.forEach((dayDiv, dayIndex) => {
     const dayData = daily[dayIndex];
     const children = Array.from(dayDiv.children);

@@ -1,0 +1,20 @@
+#daily-forecast {
+  display: flex;
+  overflow-x: scroll;
+  justify-content: space-between;
+  font-size: 17px;
+}
+
+#daily-forecast > h4 {
+  flex-grow: 2;
+  width: 100%;
+  margin: 2px 0 16px;
+}
+
+.day-div {
+  display: flex;
+  flex-direction: column;
+  // width: 15%;
+  min-width: 7rem;
+  margin: 0 6px;
+};

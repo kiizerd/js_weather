@@ -1,95 +1,20 @@
 body {
-  // background: url('../media/cloud_bg.jpg');
-  background: url('../media/cloud_mountain_bg.jpg');
-  overflow: hidden;
+  background-image: url('../media/cloud_mountain_bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
 }
 
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  // background-color: rgb(51, 90, 129);
-  padding-bottom: 8px;
-}
-
-header > time {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
+h2 {
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 main {
-  margin: 0 auto 0 auto;
   padding: 0 8px 6px 8px;
-  // width: 45%;
   height: 100%;
   background-color: rgba(18, 93, 168, 0.781);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   box-shadow: 2px 0px 2px rgba(9, 54, 100, 0.781), 0px 3px 1px rgba(9, 54, 100, 0.781);
 }
-
-form {
-  display: flex;
-  justify-content: center;
-  padding: 8px 1rem;
-  position: absolute;
-  top: 3rem;
-  left: 0;
-  // background-color: rgb(51, 90, 129);
-}
-
-input {
-  width: 100%;
-}
-
-button {
-  margin: 2px 6px 10px;
-  padding: 0 10px;
-}
-
-#current-weather {
-  display: flex;
-  justify-content: flex-start;
-}
-
-figcaption {
-  color: var(--text);
-}
-
-#current-temps {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin: 8rem 8rem 10rem 0;
-}
-
-h6 {
-  margin-bottom: 8px;
-}
-
-#current-details {
-  display: flex;
-  flex-direction: column;
-}
-
-#daily-forecast {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  font-size: 17px;
-}
-
-#daily-forecast > h4 {
-  flex-grow: 2;
-  width: 100%;
-  margin: 2px 0 16px;
-}
-
-.day-div {
-  display: flex;
-  flex-direction: column;
-  width: 15%;
-  margin: 0 auto;
-};
